@@ -9,9 +9,6 @@ public class Main {
     public static void main(String[] args) {
         File baseDir = new File(BASE_DIR);
 
-//                В каталог res создайте три директории: drawables, vectors, icons.
-//                В директории temp создайте файл temp.txt.
-
         createDir("src");
         createDir("res");
         createDir("savegames");
@@ -31,6 +28,7 @@ public class Main {
 
         writeLogToFile();
     }
+
     private static void log(File f, boolean result) {
         logger.append("Создание ")
                 .append(f.isDirectory() ? "директории " : "файла ")
@@ -45,6 +43,7 @@ public class Main {
         boolean result = tmp.mkdir();
         log(tmp, result);
     }
+
     private static void createFile(String path) {
         File tmp = new File(BASE_DIR + path);
         boolean result;
@@ -64,7 +63,6 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
 }
