@@ -39,8 +39,6 @@ public class Main {
             } else {
                 try {
                     result = tmp.createNewFile();
-                    log(tmp, result);
-
                 } catch (IOException e) {
                     e.printStackTrace();
                     result = false;
